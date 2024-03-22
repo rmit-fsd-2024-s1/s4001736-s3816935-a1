@@ -12,7 +12,7 @@ export default function Home(props) {
       <h2>Organic Products</h2>
       {products.map((item, index) => (   // Loop through products using map, display each product based on index
         <div className="products" key={index}>   
-          
+          <img src={item.productImage[index]} className="productImage" alt="image"></img>
           <br/><span className="productName">{item.productName}</span> 
           <br/><span className="productPrice">${item.productPrice}</span>
           {/* <br/>{props.username !== null && 
