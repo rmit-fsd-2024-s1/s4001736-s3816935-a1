@@ -72,19 +72,7 @@ h5 {
 }
 
 
-.movies {
-  float: left;
-  width:325px;
-  height:800px;
-  margin:10px; 
-	padding:20px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 14px 8px #d8d8d8;
-  overflow: auto;
-  font-size: 15px;
-}
-
-.movieReviews {
+.products {
   float: left;
   width:325px;
   height:600px;
@@ -96,13 +84,30 @@ h5 {
   font-size: 15px;
 }
 
-.movieTitle {
+.productReviews {
+  float: left;
+  width:325px;
+  height:600px;
+  margin:10px; 
+	padding:20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 14px 8px #d8d8d8;
+  overflow: auto;
+  font-size: 15px;
+}
+
+.productName {
   font-size: 25px;
 }
 
-.movieImage {
+.productImage {
   width:280px;
   height:500px;
+}
+
+.productPrice {
+  font-size: 30px; 
+  font-weight: bold;
 }
 
 .form {
