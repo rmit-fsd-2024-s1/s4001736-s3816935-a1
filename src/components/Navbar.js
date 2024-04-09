@@ -1,6 +1,7 @@
 // Reference to Week 2 Lectorial Example 06
 import React from "react";
 import { Link } from "react-router-dom";
+import cartButton from "../icons/shoppingcart.png";
 
 export default function Navbar(props) {
   return (
@@ -16,9 +17,9 @@ export default function Navbar(props) {
                 <li className="nav-item">
                   <Link className="nav-link" to="/profile">My Profile</Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link className="nav-link" to="/review">Reviews</Link>
-                </li>
+                </li> */}
               </>
             }
           </ul>
@@ -38,6 +39,9 @@ export default function Navbar(props) {
               <>
                 <li className="nav-item">
                   <span className="nav-link text-light">Welcome, {props.username}</span>
+                </li>
+                <li>
+                  <Link className="nav-link" to="/shoppingcart"><img src={cartButton} className="smallicon" alt="cart"/></Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/login" onClick={props.logoutUser}>Logout</Link>
