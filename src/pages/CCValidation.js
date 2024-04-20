@@ -1,0 +1,64 @@
+import React, {useState} from "react";
+// https://www.npmjs.com/package/validator
+// https://www.tutorialspoint.com/how-to-validate-a-credit-card-number-in-reactjs
+// npm i validator
+import validator from "validator";
+
+export default function CheckOut(props) {
+  let [cardNumber, setCardNumber] = useState("");
+  let [messageOfNumber, setMessageOfNumber] = useState("");
+  let [cardDate, setCardDate] = useState("");
+  let [messageOfDate, setMessageOfDate] = useState("");
+
+  function handleCreditCardNumber(event) {
+    let value = event.target.value;
+    setCardNumber(value);
+    if(validator.isCreditCard(value)) {  // check if the string is a credit card number.
+      setMessageOfNumber("is a valid credit card number");
+    } else {
+      setMessageOfNumber("is NOT a valid credit card number");
+    }
+  }
+
+  function handleCreditCardExpiryDate(event) {
+    let value = event.target.value;
+    setCardDate(value);
+    const mmyy = value.split("/");
+    const mm_expiry = Number(mmyy[0]);
+    const yy_expiry = Number("20" + mmyy[1]);
+
+    const today = new Date();
+    const mm_now = today.getMonth() + 1; // Months start at 0!
+    const yy_now = today.getFullYear();
+
+    // Format must be mm/yy, mm_expiry shouldn't be 00, mm_expiry should be greater than 12, expiry date must be after this month.
+    if(!value.match(/\d{2}\/\d{2}/) || mm_expiry === 0 || mm_expiry > 12 || yy_now > yy_expiry || (yy_now === yy_expiry && mm_now > mm_expiry)) {
+      setMessageOfDate("is NOT a valid credit card expiry date");
+    } else {
+      setMessageOfDate("is a valid credit card expiry date");
+    }
+  }
+
+  return (
+    <div>
+      <h3>
+        {" "}
+        Please input credit card number: {""}
+      </h3>
+      <input type="number" value={cardNumber} onChange={handleCreditCardNumber} />
+      <p>
+        {" "}
+        {cardNumber} {messageOfNumber}
+      </p>
+      <h3>
+        {" "}
+        Please input credit card expiry date: {""}
+      </h3>
+      <input type="string" placeholder="mm/yy" value={cardDate} onChange={handleCreditCardExpiryDate} />
+      <p>
+        {" "}
+        {cardDate} {messageOfDate}
+      </p>
+    </div>
+  );
+}
