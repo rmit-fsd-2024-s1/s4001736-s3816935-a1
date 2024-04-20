@@ -9,6 +9,10 @@ export default function Navbar(props) {
       <div className="container">
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
+            <li><button class="hamburger-menu" aria-label="Toggle navigation">
+                  <span class="hamburger-menu-icon"></span>
+                </button>
+            </li>
             <li className="nav-item">
               <Link className="nav-link" to="/">Home</Link>
             </li>
