@@ -9,9 +9,8 @@
 }
 
 .headerImage {
-  width:1400px;
-  height:250px;
-  margin: 0 auto;
+  width: 100vw;
+  max-height: 30vw;
 }
 
 .headerContainer {

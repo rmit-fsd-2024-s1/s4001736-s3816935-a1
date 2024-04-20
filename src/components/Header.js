@@ -1,5 +1,5 @@
 import React from 'react';
-import headerImage from "../images/organic_food.jpg";   // Find an image for header
+import headerImage from "../images/organic_food.jpeg";   // Find an image for header
 
 export default function Header() {
   return (
