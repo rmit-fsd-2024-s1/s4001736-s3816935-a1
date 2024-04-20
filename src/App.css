@@ -122,6 +122,7 @@ h5 {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 50px;
+  background-image: url("https://st2.depositphotos.com/1043285/8526/i/450/depositphotos_85263502-stock-photo-soil.jpg");
 }
 
 .container2 {
@@ -216,6 +217,6 @@ footer {
   margin-top:auto; 
   padding-top: 0.75rem; 
   padding-bottom: 0.75rem; 
-  background-color: #343a40;
+  background-color: #1f4127;
   color:white;
 }
