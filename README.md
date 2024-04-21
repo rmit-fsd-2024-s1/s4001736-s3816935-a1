@@ -73,7 +73,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-Small Scale Farming credit source:
-https://www.almanac.com/vegetable-gardening-for-beginners
-https://www.bunnings.com.au/diy-advice/garden/planting-and-growing/nine-easy-vegies-to-grow 
