@@ -262,6 +262,19 @@ button.getmealBtn {
   margin: auto;
 }
 
+h2.mealTitle {
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+article.mealRec {
+  margin: 20px 25px 50px;
+}
+
+.instructions {
+  display: inline-block;
+}
+
 footer {
   font-size: 1rem;
     bottom: 0;

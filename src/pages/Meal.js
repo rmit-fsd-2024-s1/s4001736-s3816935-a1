@@ -22,15 +22,14 @@ export default function Meal({meal}) {
     }, [meal.id])
 
     return (
-        <article>
-            <h2>{meal.title}</h2>
+        <article className="mealRec">
+            <h2 className="mealTitle">{meal.title}</h2>
             <img src={imageUrl} alt="recipe" />
             <ul className='instructions'>
                 <li>Preparation time: {meal.readyInMinutes} minutes</li>
                 <li>Number of servings: {meal.servings}</li>
+               <li><a href={meal.sourceUrl}>Go to Recipe</a></li>
             </ul>
-
-            <a href={meal.sourceUrl}>Go to Recipe</a>
         </article>
     );
 }
