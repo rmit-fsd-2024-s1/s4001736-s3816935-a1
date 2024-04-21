@@ -257,6 +257,11 @@ section {
   flex-direction: column;
 }
 
+button.getmealBtn {
+  display: block;
+  margin: auto;
+}
+
 footer {
   font-size: 1rem;
     bottom: 0;

@@ -23,7 +23,7 @@ export default function DietPlan() {
   // https://spoonacular.com/food-api/docs#Authentication
   // Once registered from spoonacular, you can find your api key under MY CONSOLE > Profile.
   // https://spoonacular.com/food-api/console#Profile
-  // API Key: e0e089a5bf9440d3a68e2f80ecaac06c
+  // API Key: c719e3a2585848c6abff65e3176c1287
   // API Key: 69ce649e2e0746459d694c8ba5c021a8
   // API Key: 40d712bba25d4a46b07ec5bc5067646c
   // https://spoonacular.com/food-api/docs#Generate-Meal-Plan
@@ -31,7 +31,7 @@ export default function DietPlan() {
   // "message": "Your daily points limit of 150 has been reached. Please upgrade your plan to continue using the API."
   function getMealData() {
     fetch(
-      `https://api.spoonacular.com/mealplanner/generate?apiKey=40d712bba25d4a46b07ec5bc5067646c&timeFrame=${timeFrame}&targetCalories=${calories}&diet=${diet}&exclude=${exclude}`
+      `https://api.spoonacular.com/mealplanner/generate?apiKey=c719e3a2585848c6abff65e3176c1287&timeFrame=${timeFrame}&targetCalories=${calories}&diet=${diet}&exclude=${exclude}`
     )
     .then((response) => response.json())
     .then((data) => {
@@ -74,7 +74,7 @@ export default function DietPlan() {
           <input type="string" placeholder="Exclude (e.g. shellfish, olives)" onChange={handleExcludeChange} />
         </label>     
       </section>
-      <button onClick={getMealData}>Get Meal Plan</button>
+      <button className="getmealBtn" onClick={getMealData}>Get Meal Plan</button>
       {mealData && <MealList mealData={mealData}/>}
     </div>
   );
