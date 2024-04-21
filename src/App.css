@@ -188,6 +188,10 @@ div.homepage-sections {
   justify-content: center;
 }
 
+div.smallScaleFarming {
+  padding: 20px;
+}
+
 .cartItem {
   align-items: left;
   width:1400px;
