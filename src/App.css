@@ -203,6 +203,11 @@ div.smallScaleFarming {
   font-size: 18px;
 }
 
+div.emptyCart {
+  margin-top: 10vw;
+  text-align: center;
+}
+
 .cartItem {
   align-items: left;
   width:1400px;

@@ -29,9 +29,21 @@ export default function ShoppingCart(props){
     navigate("/shoppingcart"); 
   }
   
+
+  if (totalPrice == 0) {
+    return <div className="emptyCart">
+      <h4 className="emptyCart">Looks like your cart is empty!</h4>
+      <a href="../pages/Home.js">Go back to shopping?</a>
+      </div>
+    
+    ;
+  }
+
+  else {
   return (
     <div className="main">
       <h1>Shopping Cart</h1>
+
       <h4>Subtotal: ${totalPrice}</h4>
       {cart.length !== 0 && 
         cart.map((item, index) => { 
@@ -50,6 +62,8 @@ export default function ShoppingCart(props){
       
     </div>
   );
+    }
+
 }
 
 /*
