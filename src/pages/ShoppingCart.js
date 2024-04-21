@@ -33,7 +33,7 @@ export default function ShoppingCart(props){
   if (totalPrice == 0) {
     return <div className="emptyCart">
       <h4 className="emptyCart">Looks like your cart is empty!</h4>
-      <a href="../pages/Home.js">Go back to shopping?</a>
+      <a href="../">Go back to shopping?</a>
       </div>
     
     ;
