@@ -10,6 +10,7 @@ import MyProfile from "./pages/MyProfile";
 import DietPlan from "./pages/DietPlan"; 
 import ShoppingCart from "./pages/ShoppingCart";
 import CheckOut from "./pages/CCValidation";
+import Receipt from "./pages/Receipt"; 
 import { getUser, removeUser } from "./repository/credentials";
 import { initCart } from './repository/cart';
 import "./App.css";
@@ -42,6 +43,7 @@ export default function App() {
               <Route path="/diet" element={<DietPlan username={username} logoutUser={logoutUser}/>} />
               <Route path="/shoppingcart" element={<ShoppingCart username={username} logoutUser={logoutUser}/>} />
               <Route path="/checkout" element={<CheckOut username={username} logoutUser={logoutUser}/>} />
+              <Route path="/receipt" element={<Receipt username={username} logoutUser={logoutUser}/>} />
             </Routes>
           </div>
         </main>

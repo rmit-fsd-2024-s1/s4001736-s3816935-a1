@@ -3,6 +3,8 @@ import React, { useState } from "react";
 const ITEMS_KEY = "items";
 const ITEM_KEY = "item";
 const TOTALPRICE_KEY = "totalPrice"; 
+const RECEIPT_KEY = "receipt"; 
+const SUMMARYPRICE_KEY = "summaryPrice"; 
 
 function initCart() {
 
@@ -64,16 +66,6 @@ function getCart() {
   return JSON.parse(data);
 }
 
-// function getEmail(cartname) {
-//   const carts = getcarts();
-//   for(const cart of carts) {
-//     if(cartname === cart.cartname)
-//     {
-//       return cart.email;
-//     }
-//   }
-// }
-
 function updateTotalPrice(price) {
   const totalPrice = getTotalPrice(); 
   totalPrice += price; 
@@ -98,6 +90,26 @@ function getItem() {
   return localStorage.getItem(ITEM_KEY);
 }
 
+function setReceipt(items) {
+  localStorage.setItem(RECEIPT_KEY, JSON.stringify(items));
+}
+
+function getReceipt() {
+  const data = localStorage.getItem(RECEIPT_KEY);
+  
+  return JSON.parse(data);
+}
+
+function setSummaryPrice(price) {
+  localStorage.setItem(SUMMARYPRICE_KEY, JSON.stringify(price));
+}
+
+function getSummaryPrice() {
+  const data = localStorage.getItem(SUMMARYPRICE_KEY);
+  
+  return JSON.parse(data);
+}
+
 // function removeItem() {
 //   localStorage.removeItem(ITEM_KEY);
 // }
@@ -108,9 +120,13 @@ export {
   verifyItem, 
   updateItem, 
   removeItem, 
-  getCart, 
+  getCart,  
   updateTotalPrice, 
   getTotalPrice, 
   setCart,
-  getItem
+  getItem, 
+  setReceipt, 
+  getReceipt,
+  setSummaryPrice, 
+  getSummaryPrice
 }

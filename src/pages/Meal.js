@@ -10,7 +10,11 @@ export default function Meal({meal}) {
     // https://api.spoonacular.com/recipes/{id}/information
     useEffect(() => {
         fetch(
+<<<<<<< Updated upstream
             `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=c719e3a2585848c6abff65e3176c1287&includeNutrition=false`
+=======
+            `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=e0e089a5bf9440d3a68e2f80ecaac06c&includeNutrition=false`
+>>>>>>> Stashed changes
         )
         .then((response) => response.json())
         .then((data) => {

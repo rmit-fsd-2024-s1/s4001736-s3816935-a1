@@ -3,22 +3,28 @@ import React, {useState} from "react";
 // https://www.tutorialspoint.com/how-to-validate-a-credit-card-number-in-reactjs
 // npm i validator
 import validator from "validator";
-import { getTotalPrice } from "../repository/cart";
+import { useNavigate } from "react-router-dom"
+import { getTotalPrice, getCart, setReceipt, setSummaryPrice } from "../repository/cart";
 
 export default function CheckOut(props) {
   const totalPrice = getTotalPrice(); 
+  const cart = getCart(); 
+  const navigate = useNavigate();
   let [cardNumber, setCardNumber] = useState("");
   let [messageOfNumber, setMessageOfNumber] = useState("");
+  let [numberError, setNumberError] = useState(true);
   let [cardDate, setCardDate] = useState("");
   let [messageOfDate, setMessageOfDate] = useState("");
+  let [dateError, setDateError] = useState(true); 
 
   function handleCreditCardNumber(event) {
     let value = event.target.value;
     setCardNumber(value);
     if(validator.isCreditCard(value)) {  // check if the string is a credit card number.
       setMessageOfNumber("is a valid credit card number");
+      setNumberError(false);
     } else {
-      setMessageOfNumber("is NOT a valid credit card number");
+      setMessageOfNumber("is NOT a valid credit card number"); 
     }
   }
 
@@ -36,9 +42,23 @@ export default function CheckOut(props) {
     // Format must be mm/yy, mm_expiry shouldn't be 00, mm_expiry should be greater than 12, expiry date must be after this month.
     if(!value.match(/\d{2}\/\d{2}/) || mm_expiry === 0 || mm_expiry > 12 || yy_now > yy_expiry || (yy_now === yy_expiry && mm_now > mm_expiry)) {
       setMessageOfDate("is NOT a valid credit card expiry date");
+      setDateError(false);
     } else {
       setMessageOfDate("is a valid credit card expiry date");
     }
+  }
+
+  const handleCheckOut = (event) => {
+    event.preventDefault();
+     
+    if(numberError === false && dateError === false) {
+      setReceipt(cart); 
+      setSummaryPrice(totalPrice); 
+      alert("Check out successful! "); 
+      navigate("/receipt");
+      return
+    }
+    alert("Please input valid credit card information. ");
   }
 
   return (
@@ -63,6 +83,7 @@ export default function CheckOut(props) {
         {" "}
         {cardDate} {messageOfDate}
       </p>
+      <button className="btn btn-success mr-2" onClick={handleCheckOut}>Confirm</button>
     </div>
   );
 }
