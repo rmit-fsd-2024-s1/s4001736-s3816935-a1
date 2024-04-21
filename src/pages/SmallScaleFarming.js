@@ -28,8 +28,15 @@ const smallScaleFarming =
         <h5>Plant Pot size</h5>
         <p>Once you know how big your gardening space is, you can now easily pick which plant pots size you would need. Many plants would need to be place in pots first before being able to be transfer onto the soil.</p>
 
+        <br></br>
+
         <h5>Choosing Vegetables</h5>
-        <p>It's importantant to understand what vegetables you can or can't plant </p>
+        <p>It's importantant to understand what vegetables you can or can't plant within your environment. Australian is a big land where climate differs from one region to another. Sydney has a subtropical climate while Melbourne has a cooler temperate climate. It's best to consider the climate factors of what veggies are suitable for each climate.</p>
+
+        <br></br>
+
+        <h5>When to Plant</h5>
+        <p>Similarly, the timing of when to plant some vegetables are also important. With different climate zones also comes with different seasons that would cycle through. Different seasons call for different characteristics of weather and temperature as well where certain plants can or can't grow.</p>
 
       </div>
       ;
