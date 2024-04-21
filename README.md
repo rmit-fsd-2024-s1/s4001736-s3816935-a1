@@ -1,3 +1,8 @@
+
+Small Scale Farming credit source:
+https://www.almanac.com/vegetable-gardening-for-beginners
+https://www.bunnings.com.au/diy-advice/garden/planting-and-growing/nine-easy-vegies-to-grow 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
