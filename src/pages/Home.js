@@ -35,7 +35,7 @@ export default function Home(props) {
         }
       })}
       </div>
-      
+
       <div class="homepage-headings">
       <h2 >Small-Scale Farming</h2>
       </div>
@@ -57,7 +57,17 @@ export default function Home(props) {
           <li>When to plant</li>
           <li>Planning ahead</li>
         </ul>
+
+        <br></br>
+
+        <h5>Garden size</h5>
+        <p>Knowing how big your garden or space for planting your favourite vegetables is important as different veggies grow in different sizes and as well knowing how much can you grow. Plus, it also helps you be considerate about choosing what vegetables you are able to grow.</p>
+
+        <br></br>
         
+        <h5>Plant Pot size</h5>
+        <p>Once you know how big your gardening space is, you can now easily pick which plant pots size you would need. Many plants would need to be place in pots first before being able to be transfer onto the soil.</p>
+
       </div>
 
     </div>
