@@ -40,7 +40,7 @@ export default function Home(props) {
       <h2 >Small-Scale Farming</h2>
       </div>
        <div class="homepage-sections">
-        <p> </p>
+        <h4>Want to grow your own veggies?</h4>
        </div>
 
     </div>

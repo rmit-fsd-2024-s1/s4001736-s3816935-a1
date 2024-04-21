@@ -239,10 +239,12 @@ section {
 
 footer {
   bottom: 0;
-  height: 100px;
-  margin-top:auto; 
-  padding-top: 0.75rem; 
+  height: 664px;
+  width: 100%;
+  margin-top: auto; 
+  padding-top: 35rem; 
   padding-bottom: 0.75rem; 
-  background-color: #1f4127;
+  background-image: url("https://pngimg.com/d/soil_PNG69.png");
   color:white;
+  text-align: center;
 }
