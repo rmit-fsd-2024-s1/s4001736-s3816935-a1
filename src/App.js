@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import MyProfile from "./pages/MyProfile";
+import DietPlan from "./pages/DietPlan"; 
 import ShoppingCart from "./pages/ShoppingCart";
 import CheckOut from "./pages/CCValidation";
 import { getUser, removeUser } from "./repository/credentials";
@@ -36,6 +37,7 @@ export default function App() {
               <Route path="/signup" element={<SignUp username={username} loginUser={loginUser}/>} />
               <Route path="/login" element={<Login loginUser={loginUser} />} />
               <Route path="/profile" element={<MyProfile username={username} logoutUser={logoutUser} loginUser={loginUser}/>} />
+              <Route path="/diet" element={<DietPlan username={username} logoutUser={logoutUser}/>} />
               <Route path="/shoppingcart" element={<ShoppingCart username={username} logoutUser={logoutUser}/>} />
               <Route path="/checkout" element={<CheckOut username={username} logoutUser={logoutUser}/>} />
             </Routes>

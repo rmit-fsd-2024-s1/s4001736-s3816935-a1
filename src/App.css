@@ -45,7 +45,7 @@ h1 {
 
 h2 {
   margin:20px;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
   text-align: left;
 }
@@ -209,6 +209,16 @@ h5 {
 
 .reviews {
   padding-left:400px;
+}
+
+section {
+  margin: 2rem 0 1rem 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 footer {
