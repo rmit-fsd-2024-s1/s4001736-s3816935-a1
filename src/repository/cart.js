@@ -47,14 +47,14 @@ function updateItem(id, quantity) {   // If the item is already in the cart, upd
   console.log(items);
 }
 
-// function removeItem(id) {
-//   const carts = getCart();  // Old carts. 
-//   console.log(carts);
-//   const newcarts = carts.filter((item) => item.cartname !== onecartName);
-//   // delete carts[onecartName];
-//   console.log(newcarts);
-//   setcarts(newcarts);  // New carts.
-// }
+function removeItem(id) {
+  const items = getCart();  // Old carts. 
+  console.log(items);
+  const newCart = items.filter((item) => item.itemID !== id);
+  // delete carts[onecartName];
+  console.log(newCart);
+  setCart(newCart);  // New carts.
+}
 
 function getCart() {
   // Extract cart data from local storage.
@@ -98,19 +98,19 @@ function getItem() {
   return localStorage.getItem(ITEM_KEY);
 }
 
-function removeItem() {
-  localStorage.removeItem(ITEM_KEY);
-}
+// function removeItem() {
+//   localStorage.removeItem(ITEM_KEY);
+// }
 
 export {
   initCart,
   addItem,
   verifyItem, 
   updateItem, 
+  removeItem, 
   getCart, 
   updateTotalPrice, 
   getTotalPrice, 
   setCart,
-  getItem,
-  removeItem
+  getItem
 }

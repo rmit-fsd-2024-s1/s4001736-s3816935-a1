@@ -58,6 +58,12 @@ h3 {
   text-align: left;
 }
 
+h4 {
+  font-size: 20px; 
+  text-align: center;
+  font-weight: bold;
+}
+
 h5 {
   font-size: 20px;
   font-weight: bold;
@@ -198,7 +204,7 @@ div.smallScaleFarming {
 .cartItem {
   align-items: left;
   width:1400px;
-  height:300px;
+  height:330px;
   margin:10px; 
 	padding:20px;
   border-radius: 15px;

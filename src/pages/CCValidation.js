@@ -40,20 +40,21 @@ export default function CheckOut(props) {
   }
 
   return (
-    <div>
-      <h3>
+    <div className="main">
+      <h1>Check Out</h1>
+      <h4>
         {" "}
         Please input credit card number: {""}
-      </h3>
+      </h4>
       <input type="number" value={cardNumber} onChange={handleCreditCardNumber} />
       <p>
         {" "}
         {cardNumber} {messageOfNumber}
       </p>
-      <h3>
+      <h4>
         {" "}
         Please input credit card expiry date: {""}
-      </h3>
+      </h4>
       <input type="string" placeholder="mm/yy" value={cardDate} onChange={handleCreditCardExpiryDate} />
       <p>
         {" "}

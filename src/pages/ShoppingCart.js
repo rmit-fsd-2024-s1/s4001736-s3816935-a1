@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 import { useNavigate } from "react-router-dom"
 import { getProducts} from "../repository/products";
-import { getCart, getTotalPrice } from "../repository/cart";
+import { getCart, getTotalPrice, removeItem } from "../repository/cart";
+import deleteButton from "../icons/deleteicon.png";
 
 export default function ShoppingCart(props){
   const products = getProducts();
@@ -21,6 +22,12 @@ export default function ShoppingCart(props){
     event.preventDefault();
     navigate("/checkout");
   }
+
+  const deleteItem = (id) => {
+    removeItem(id); 
+    alert("Item removed from cart!");
+    navigate("/shoppingcart"); 
+  }
   
   return (
     <div className="main">
@@ -35,7 +42,7 @@ export default function ShoppingCart(props){
             <br/><span className="productName">{item.itemName}</span> 
             <br/><span>x{item.itemQuantity}</span>
             <br/><span className="productPrice">${currPrice}</span>
-      
+            <br/><button onClick={() => deleteItem(item.itemID)}><img src={deleteButton} className="smallicon" alt="delete"/>Remove from cart</button>
           </div>
       )})
       } 
