@@ -117,7 +117,6 @@ h5 {
 }
 
 
-
 .main {
   text-align: center;
   margin-top: 20px;
@@ -135,14 +134,15 @@ h5 {
 
 .products {
   float: left;
-  width:325px;
-  height:600px;
-  margin:10px; 
-	padding:20px;
+  width: 40vh;
+  height: 75%;
+  margin: 20px; 
+  padding: 20px;
   border-radius: 15px;
   box-shadow: 0px 4px 14px 8px #d8d8d8;
   overflow: auto;
   font-size: 15px;
+  justify-content: center;
 }
 
 .productReviews {
@@ -162,13 +162,30 @@ h5 {
 }
 
 .productImage {
-  width:280px;
-  height:400px;
+  width: 15vw;
+  height: 40vh;
+  margin: 30px;
 }
 
 .productPrice {
   font-size: 30px; 
   font-weight: bold;
+}
+
+div.homepage-headings {
+  width: 96vw;
+  height: 5vh;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+div.homepage-sections {
+  width: 98vw;
+  margin-bottom: 2vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cartItem {
@@ -221,8 +238,8 @@ section {
 }
 
 footer {
-  bottom:0;
-  height:100px;
+  bottom: 0;
+  height: 100px;
   margin-top:auto; 
   padding-top: 0.75rem; 
   padding-bottom: 0.75rem; 
