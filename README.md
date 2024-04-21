@@ -1,3 +1,15 @@
+GitHub link: 
+https://github.com/rmit-fsd-2024-s1/s4001736-s3816935-a1
+
+Small Scale Farming credit source:
+https://www.almanac.com/vegetable-gardening-for-beginners
+https://www.bunnings.com.au/diy-advice/garden/planting-and-growing/nine-easy-vegies-to-grow 
+
+Organic products images source: 
+https://www.coles.com.au/search?q=organic
+
+Credit Card validation and Diet Plan sources are included in those files as comments. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -69,6 +81,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-Small Scale Farming credit source:
-https://www.almanac.com/vegetable-gardening-for-beginners
-https://www.bunnings.com.au/diy-advice/garden/planting-and-growing/nine-easy-vegies-to-grow 
+
