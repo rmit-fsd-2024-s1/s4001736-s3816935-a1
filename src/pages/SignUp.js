@@ -31,16 +31,27 @@ export default function SignUp(props) {
     const handleSubmit = (event) => {
         if (event) event.preventDefault();
 
-        // if (!fields.email) {
-        //     errors.email = 'Email address is required';
-        //   } else if (!/\S+@\S+\.\S+/.test(fields.email)) {
-        //     errors.email = 'Email address is invalid';
-        //   }
-        //   if (!fields.password) {
-        //     errors.password = 'Password is required';
-        //   } else if (!/^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$/.test(fields.password)) {
-        //     errors.password = 'Password must be 8 or more characters, have at least 1 capital letter and at least 1 number. ';
-        //   }
+        if(!fields.username) {
+            alert('Username is required');
+            return;
+        }
+
+        if (!fields.email) {
+            alert('Email address is required');
+            return; 
+          } else if (!/\S+@\S+\.\S+/.test(fields.email)) {
+            alert('Email address is invalid, please input correct email');
+            return;
+          }
+        if (!fields.password) {
+            alert('Password is required');
+            return;
+        }
+        // else if (fields.password.length < 8) {
+        else if (!/^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,32}$/.test(fields.password)) {
+            alert('Password must be 8-32 characters, has at least 3 lower letters, at least 2 capital letters, at least 2 numbers, and 1 special character (!@#$&*). ');
+            return;
+          }
 
         const verified = verifyUser(fields.username, fields.email);
         if(verified === false) {
