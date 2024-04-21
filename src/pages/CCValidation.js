@@ -3,8 +3,10 @@ import React, {useState} from "react";
 // https://www.tutorialspoint.com/how-to-validate-a-credit-card-number-in-reactjs
 // npm i validator
 import validator from "validator";
+import { getTotalPrice } from "../repository/cart";
 
 export default function CheckOut(props) {
+  const totalPrice = getTotalPrice(); 
   let [cardNumber, setCardNumber] = useState("");
   let [messageOfNumber, setMessageOfNumber] = useState("");
   let [cardDate, setCardDate] = useState("");
@@ -42,6 +44,7 @@ export default function CheckOut(props) {
   return (
     <div className="main">
       <h1>Check Out</h1>
+      <h4>Subtotal: ${totalPrice}</h4>
       <h4>
         {" "}
         Please input credit card number: {""}
