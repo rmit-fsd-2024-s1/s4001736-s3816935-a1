@@ -31,11 +31,7 @@ export default function DietPlan() {
   // "message": "Your daily points limit of 150 has been reached. Please upgrade your plan to continue using the API."
   function getMealData() {
     fetch(
-<<<<<<< Updated upstream
       `https://api.spoonacular.com/mealplanner/generate?apiKey=c719e3a2585848c6abff65e3176c1287&timeFrame=${timeFrame}&targetCalories=${calories}&diet=${diet}&exclude=${exclude}`
-=======
-      `https://api.spoonacular.com/mealplanner/generate?apiKey=e0e089a5bf9440d3a68e2f80ecaac06c&timeFrame=${timeFrame}&targetCalories=${calories}&diet=${diet}&exclude=${exclude}`
->>>>>>> Stashed changes
     )
     .then((response) => response.json())
     .then((data) => {

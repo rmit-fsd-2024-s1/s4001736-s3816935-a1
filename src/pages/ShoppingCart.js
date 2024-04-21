@@ -28,12 +28,17 @@ export default function ShoppingCart(props){
     alert("Item removed from cart!");
     navigate("/shoppingcart"); 
   }
+
+  const handleGoBack = () => {
+    //event.preventDefault();
+    navigate("/");
+  }
   
 
   if (totalPrice == 0) {
     return <div className="emptyCart">
       <h4 className="emptyCart">Looks like your cart is empty!</h4>
-      <a href="../">Go back to shopping?</a>
+      <a href="#" onClick={handleGoBack}>Go back to shopping?</a>
       </div>
     
     ;
