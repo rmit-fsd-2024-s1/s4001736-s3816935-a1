@@ -136,6 +136,9 @@ h5 {
   margin-left: auto;
 }
 
+img.ssfImg {
+  width: 50vw;
+}
 
 .products {
   float: left;
