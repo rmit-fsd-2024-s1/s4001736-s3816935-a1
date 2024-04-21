@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { initProducts } from './repository/products';
 import { initUsers } from './repository/credentials';
-import {initCart} from './repository/cart';
+import { initCart } from './repository/cart';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

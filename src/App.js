@@ -11,6 +11,7 @@ import DietPlan from "./pages/DietPlan";
 import ShoppingCart from "./pages/ShoppingCart";
 import CheckOut from "./pages/CCValidation";
 import { getUser, removeUser } from "./repository/credentials";
+import { initCart } from './repository/cart';
 import "./App.css";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
 
   const loginUser = (username) => {
     setUsername(username);
+    initCart(); 
   }
 
   const logoutUser = () => {

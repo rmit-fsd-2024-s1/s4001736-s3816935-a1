@@ -31,10 +31,12 @@ export default function StoreItem(props) {
 
     if(verified === false) {
       addItem(id, quantity, name, price, image);
+      alert("Product added to cart! "); 
       return
     }
 
     updateItem(id, quantity);
+    alert("Product added to cart! "); 
 
     // console.log(id); 
     // console.log(quantity);
